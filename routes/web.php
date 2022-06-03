@@ -19,9 +19,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboardnew');
+    return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::resource('prodi', ProdiController::class)->middleware(['auth']);
+Route::resources('prodi', ProdiConntroller::class)->middleware(['auth']);
 
 require __DIR__.'/auth.php';

@@ -320,14 +320,16 @@
                         </li>
                         <li class="nav-item">
                             <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}" class="nav-link">
-                                @csrf
+                        <form method="POST" action="{{ route('logout') }}" class="nav-link">
+                            @csrf
 
-                                <a href="route('logout')" onclick="event.preventDefault();
+                            <a href="route('logout')"
+                                    onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                    <i class="nav-icon fas fa-copy"></i> {{ __('Log Out') }}
-                                </a>
-                            </form>
+                                        <i class="nav-icon fas fa-copy"></i>
+                                {{ __('Log Out') }}
+                        </a>
+                        </form>
                         </li>
                     </ul>
                 </nav>
